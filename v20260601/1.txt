@@ -1,0 +1,58 @@
+================================================================================
+Title: Example 1: 1D two-element bar
+nsd=1, ndof=1, nnp=3, nel=2, neq=3
+
+Location matrix LM (shown in 1-based dof numbers, rows=element dofs, columns=elements):
+[[1 2]
+ [2 3]]
+
+Element stiffness matrix Ke[1]:
+[[ 100.000000 -100.000000]
+ [-100.000000  100.000000]]
+
+Element stiffness matrix Ke[2]:
+[[ 200.000000 -200.000000]
+ [-200.000000  200.000000]]
+
+Global stiffness matrix K:
+[[ 100.000000 -100.000000    0.000000]
+ [-100.000000  300.000000 -200.000000]
+ [   0.000000 -200.000000  200.000000]]
+
+K is symmetric: True
+Rank(K) before boundary conditions: 2/3
+K is singular before boundary conditions: True
+Sparsity ratio of K: 0.222222
+Diagonal entries are non-negative: True
+
+Global force vector f:
+[[ 0.000000]
+ [ 0.000000]
+ [10.000000]]
+
+Unknown/free dofs F (1-based): [2 3]
+Known/fixed dofs E (1-based): [1]
+Reduced stiffness matrix K_FF:
+[[ 300.000000 -200.000000]
+ [-200.000000  200.000000]]
+Rank(K_FF) after boundary conditions: 2/2
+K_FF is singular after boundary conditions: False
+Condition number of K_FF: 1.040388e+01
+
+Solved displacement vector d:
+d1 = 0.000000
+d2 = 0.100000
+d3 = 0.150000
+
+Reaction vector r = K d - f:
+r1 = -10.000000
+r2 = -0.000000
+r3 = 0.000000
+
+Reactions on fixed dofs only:
+dof 1: reaction = -10.000000
+
+Element post-processing:
+Element 1 nodes (1, 2): L=1.000000, direction=(1.000000), de=[0.000000, 0.100000], stress=10.000000, axial_force=10.000000
+Element 2 nodes (2, 3): L=1.000000, direction=(1.000000), de=[0.100000, 0.150000], stress=10.000000, axial_force=10.000000
+================================================================================

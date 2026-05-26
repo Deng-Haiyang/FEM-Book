@@ -1,0 +1,16 @@
+{
+  "Title": "Example 1: 1D two-element bar",
+  "nsd": 1,
+  "ndof": 1,
+  "nnp": 3,
+  "nel": 2,
+  "nen": 2,
+  "E": [100.0, 200.0],
+  "CArea": [1.0, 1.0],
+  "x": [0.0, 1.0, 2.0],
+  "IEN": [[1, 2], [2, 3]],
+  "fixed_dof": [1],
+  "fixed_value": [0.0],
+  "force_dof": [2, 3],
+  "force_value": [0.0, 10.0]
+}
